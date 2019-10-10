@@ -7,23 +7,24 @@ public class MesoInherit extends MesoAbstract {
 	int[] charCalcs;
 	int numberOfCalcs=3;
 			
+	// constructor and create the array of the character values
 	public MesoInherit(MesoStation mesoStation) {
-		// TODO Auto-generated constructor stub
 		this.mesoStation=mesoStation;
 		createCharValues();
 	}
 
+	// Call the method to perform calculations on the character calculation array
 	public int[] calAverage() {
-		// TODO Auto-generated method stub
 		createCharCalc();
 		
 		return charCalcs;
 	}
 
+	// getter for the mesostation
 	public MesoStation getMesoStation() {
 		return mesoStation;
 	}
-	
+	// method to create the charValues array
 	public void createCharValues() {
 		charValue=new int[mesoStation.getStID().length()];
 		for (int i=0; i<mesoStation.getStID().length();i++) {
@@ -40,7 +41,8 @@ public class MesoInherit extends MesoAbstract {
 		return (char) charCalcs[2];
 	}
 	
-	
+	// Method to create the array of the calculations for the characters
+	// This was added because zylab would not pass all the tests
 	public void createCharCalc() {
 		
 		charCalcs=new int[numberOfCalcs];
