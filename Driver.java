@@ -8,7 +8,7 @@ public class Driver
 {
 	public static void main(String[] args) throws IOException 
 	{
-		String stID = "CHER";
+		String stID = "NRMN";
 		MesoInherit mesoInherit = new MesoInherit(new MesoStation(stID));
 
 		PosAvg posAvg = new PosAvg(stID);
