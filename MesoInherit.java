@@ -41,11 +41,21 @@ public class MesoInherit extends MesoAbstract {
 		
 		}
 	}
-
+	/**
+	 * 
+	 */
 	@Override
-	char letterAverage() {
+	public char letterAverage() {
 		// TODO Auto-generated method stub
+		double AsciiCalc=0;
+		for (int i=0; i<charValue.length; i++) {
+			AsciiCalc+=charValue[i];
+		}
+		AsciiCalc=AsciiCalc/charValue.length;
 		
+		charCalcs[0]=(int) Math.ceil(AsciiCalc);
+		charCalcs[1]=(int) Math.floor(AsciiCalc);
+		charCalcs[2]=(int) Math.round(AsciiCalc);
 		return (char) charCalcs[2];
 	}
 
