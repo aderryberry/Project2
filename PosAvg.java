@@ -59,6 +59,10 @@ public class PosAvg {
 	@Override
 	public String toString() {
 		String returnString="";
+		if (stationIndex<=2) {
+			System.out.println("Out of bounds");
+		}
+		else
 		returnString= "This index is average of "+stationList.get(stationIndex - 2)+
 				" and "+stationList.get(stationIndex)+", "+stationList.get(stationIndex-3)+" and "
 				+stationList.get(stationIndex+1)+", and so on.";
