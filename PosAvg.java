@@ -51,9 +51,9 @@ public class PosAvg {
 	@Override
 	public String toString() {
 		String returnString="";
-		returnString= String.format("This index is average of %s and %s, %s and %s, and so on."
-					, stationList.get(stationIndex - 2), stationList.get(stationIndex)
-					, stationList.get(stationIndex - 3), stationList.get(stationIndex +1));
+		returnString= "This index is average of "+stationList.get(stationIndex - 2)+
+				" and "+stationList.get(stationIndex)+", "+stationList.get(stationIndex-3)+" and "
+				+stationList.get(stationIndex+1)+", and so on.";
 		return returnString;
 	}
 	
