@@ -56,7 +56,7 @@ public class PosAvg {
 		}
 	}
 
-	// Recreated the indexOfStation to work on zylabs
+	// Recreated the indexOfStation to work on zylabs test
 	@Override
 	public String toString() {
 		String returnString="";
