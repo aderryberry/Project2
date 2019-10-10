@@ -60,7 +60,6 @@ public class PosAvg {
 	@Override
 	public String toString() {
 		String returnString="";
-		stationIndex=stationList.indexOf(stID)+1;
 		returnString= "This index is average of "+stationList.get(stationIndex - 2)+
 				" and "+stationList.get(stationIndex)+", "+stationList.get(stationIndex-3)+" and "
 				+stationList.get(stationIndex+1)+", and so on.";
