@@ -13,14 +13,16 @@ public class PosAvg {
 	private int endIndex=5;
 	private ArrayList<String> stationList = new ArrayList<String>();
 	
+
 	public PosAvg(String stID) {
-		// TODO Auto-generated constructor stub
 		this.stID=stID;
 	}
 
+	// method to find the station index
 	public int indexOfStation() throws IOException {
-		// TODO Auto-generated method stub
+
 		stationIndex=0;
+		// must create the stationlist by calling the method first
 		createStationList();
 		stationIndex=stationList.indexOf(stID)+1;
 		return stationIndex;
@@ -31,17 +33,22 @@ public class PosAvg {
 	public void createStationList() throws IOException {
 		int numberOfStations=0;
 		
+		// read the number of lines there are
 		BufferedReader br=new BufferedReader(new FileReader("Mesonet.txt"));
 		while (br.readLine()!=null) {
 			numberOfStations++;
 		}
+		// subtract the lines that do not have stations on them
 		numberOfStations=numberOfStations-linesDescribingTXTdoc;
 		
+		
+		// cycle through the txt document again and add the objects to the array list
 		BufferedReader reader=new BufferedReader(new FileReader("Mesonet.txt"));
+		// skip the lines that do not have stations on them
 		for (int i=0; i<linesDescribingTXTdoc;i++) {
 			reader.readLine();
 		}
-		
+		// cycle through the txt document and save the objects at the correct index
 		for (int i=0; i<numberOfStations; i++) {
 			stationList.add(reader.readLine().substring(beginIndex, endIndex));
 
