@@ -60,6 +60,12 @@ public class PosAvg {
 	@Override
 	public String toString() {
 		String returnString="";
+		try {
+			indexOfStation();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		returnString= "This index is average of "+stationList.get(stationIndex - 2)+
 				" and "+stationList.get(stationIndex)+", "+stationList.get(stationIndex-3)+" and "
 				+stationList.get(stationIndex+1)+", and so on.";
