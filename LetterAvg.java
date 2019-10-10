@@ -68,7 +68,7 @@ public class LetterAvg {
 
 	@Override
 	public String toString() {
-		String returnStatement = "\nThey are: ";
+		String returnStatement = "\nThey are:";
 		for (int i = 0; i < sameAvgLetter.size(); ++i) {
 			returnStatement = String.format(returnStatement + "\n" + sameAvgLetter.get(i));
 		}

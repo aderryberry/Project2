@@ -15,17 +15,7 @@ public class MesoInherit extends MesoAbstract {
 
 	public int[] calAverage() {
 		// TODO Auto-generated method stub
-		charCalcs=new int[numberOfCalcs];
-		double AsciiCalc=0;
-		
-		for (int i=0; i<charValue.length; i++) {
-			AsciiCalc+=charValue[i];
-		}
-		AsciiCalc=AsciiCalc/charValue.length;
-		
-		charCalcs[0]=(int) Math.ceil(AsciiCalc);
-		charCalcs[1]=(int) Math.floor(AsciiCalc);
-		charCalcs[2]=(int) Math.round(AsciiCalc);
+		createCharCalc();
 		
 		return charCalcs;
 	}
@@ -41,13 +31,21 @@ public class MesoInherit extends MesoAbstract {
 		
 		}
 	}
-	/**
-	 * 
-	 */
+	
+	
 	@Override
 	public char letterAverage() {
 		// TODO Auto-generated method stub
+		createCharCalc();
+		return (char) charCalcs[2];
+	}
+	
+	
+	public void createCharCalc() {
+		
+		charCalcs=new int[numberOfCalcs];
 		double AsciiCalc=0;
+		
 		for (int i=0; i<charValue.length; i++) {
 			AsciiCalc+=charValue[i];
 		}
@@ -56,11 +54,6 @@ public class MesoInherit extends MesoAbstract {
 		charCalcs[0]=(int) Math.ceil(AsciiCalc);
 		charCalcs[1]=(int) Math.floor(AsciiCalc);
 		charCalcs[2]=(int) Math.round(AsciiCalc);
-		return (char) charCalcs[2];
 	}
 
-
-	
-	
-	
 }
