@@ -76,6 +76,8 @@ public class LetterAvg {
 		}
 	}
 
+	
+	// Zylab will not accept this to string for the test
 	@Override
 	public String toString() {
 		String returnStatement = "\nThey are:";
