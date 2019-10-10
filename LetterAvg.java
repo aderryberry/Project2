@@ -70,7 +70,7 @@ public class LetterAvg {
 	public String toString() {
 		String returnStatement = "\nThey are:";
 		for (int i = 0; i < sameAvgLetter.size(); ++i) {
-			returnStatement = String.format(returnStatement + "\n" + sameAvgLetter.get(i));
+			returnStatement = returnStatement + "\n" + sameAvgLetter.get(i);
 		}
 		return returnStatement;
 	}
