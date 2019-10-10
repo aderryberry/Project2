@@ -45,14 +45,19 @@ public class MesoInherit extends MesoAbstract {
 	// This was added because zylab would not pass all the tests
 	public void createCharCalc() {
 		
+		// create the int array with the correct number of calculations done
 		charCalcs=new int[numberOfCalcs];
+		// create a double to be able to perform calculations with decimals and rounding
 		double AsciiCalc=0;
 		
+		// cycle through the charValue array and add their double values
 		for (int i=0; i<charValue.length; i++) {
 			AsciiCalc+=charValue[i];
 		}
+		// find the average
 		AsciiCalc=AsciiCalc/charValue.length;
 		
+		// assign each part of the array to the correct value.
 		charCalcs[0]=(int) Math.ceil(AsciiCalc);
 		charCalcs[1]=(int) Math.floor(AsciiCalc);
 		charCalcs[2]=(int) Math.round(AsciiCalc);
