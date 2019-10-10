@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class PosAvg {
 
+	// Initialize the variables needed throughout the class
 	private String stID;
 	private int stationIndex;
 	private int linesDescribingTXTdoc=3;
