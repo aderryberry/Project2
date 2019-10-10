@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class LetterAvg {
 
+	// Initialize the variables needed throughout the class
 	private char letterAvg;
 	private int linesDescribingTXTdoc = 3;
 	private int beginIndex = 1;
