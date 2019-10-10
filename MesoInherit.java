@@ -2,6 +2,7 @@
 
 public class MesoInherit extends MesoAbstract {
 
+	// Initialize the variables needed throughout the class
 	private MesoStation mesoStation;
 	int[] charValue;
 	int[] charCalcs;
