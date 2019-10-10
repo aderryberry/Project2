@@ -56,7 +56,7 @@ public class PosAvg {
 		}
 	}
 
-	// Zylab will not take this tostring. Will pass overall output but not test
+	// Recreated the indexOfStation to work on zylabs
 	@Override
 	public String toString() {
 		String returnString="";

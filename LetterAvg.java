@@ -18,12 +18,6 @@ public class LetterAvg {
 	public LetterAvg(char letterAvg) {
 		
 		this.letterAvg = letterAvg;
-		try {
-			createStationList();
-		}
-		catch (IOException e) {
-			System.out.println(e.getMessage());
-		}
 
 	}
 
@@ -33,6 +27,7 @@ public class LetterAvg {
 		int numStations = 0;
 		int stationCounter = 0;
 
+		createStationList();
 		//cycle through all the stations and find the number of stations that have the same letter as the avg
 		for (int i = 0; i < stationList.size(); i++) {
 			if (letterAvg == stationList.get(i).charAt(0)) {
@@ -76,11 +71,16 @@ public class LetterAvg {
 
 		}
 	}
+	
+	
 
+	
+	
 	
 	// Zylab will not accept this to string for the test
 	@Override
 	public String toString() {
+		
 		String returnStatement = "\nThey are:";
 		for (int i = 0; i < sameAvgLetter.size(); ++i) {
 			returnStatement = returnStatement + "\n" + sameAvgLetter.get(i);
